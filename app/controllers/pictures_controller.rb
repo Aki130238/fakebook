@@ -1,4 +1,6 @@
 class PicturesController < ApplicationController
+  before_action :set_picture, only: [:show, :edit, :update]
+
   def index
     @pictures = Picture.all
   end
@@ -13,13 +15,27 @@ class PicturesController < ApplicationController
   end
 
   def show
-    @picture = Picture.find(params[:id])
+  end
+
+  def edit
+  end
+
+  def update
+    if @picture.update(picture_params)
+      redirect_to pictures_path, notice: "ブログを編集しました！"
+    else
+      render 'edit'
+    end
   end
 
   private
 
   def picture_params
     params.require(:picture).permit(:title, :content, :image_pict)
+  end
+
+  def set_picture
+    @picture = Picture.find(params[:id])
   end
 
 end
