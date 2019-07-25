@@ -6,9 +6,14 @@ class ImageUploader < CarrierWave::Uploader::Base
     "users/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
 
-  process :resize_to_limit => [300, 300]
+  process :resize_to_limit => [100, 100]
 
   def extension_white_list
     %w(jpg jpeg gif png)
   end
+
+  def default_url
+    "default_user.jpg"
+  end
+
 end
