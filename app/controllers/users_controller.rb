@@ -37,10 +37,10 @@ class UsersController < ApplicationController
   #   end
   # end
   #
-  # def destroy
-  #   @user.destroy
-  #   redirect_to users_path, notice:"userを削除しました！"
-  # end
+  def destroy
+    @user.destroy
+    redirect_to users_path, notice:"userを削除しました！"
+  end
   #
   # def confirm
   #   @user = User.new(user_params)
