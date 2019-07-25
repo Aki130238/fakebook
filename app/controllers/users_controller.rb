@@ -16,15 +16,15 @@ class UsersController < ApplicationController
       render 'new'
     else
       if @user.save
-        redirect_to users_path, notice: "userを作成しました！"
+        redirect_to user_path(@user.id), notice: "userを作成しました！"
       else
         render 'new'
       end
     end
   end
 
-  # def show
-  # end
+  def show
+  end
   #
   # def edit
   # end
