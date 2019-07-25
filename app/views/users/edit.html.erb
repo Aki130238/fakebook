@@ -1,0 +1,15 @@
+<%= form_with(model: @user, local: true ,url: choose_new_or_edit) do |form| %>
+  <div class="picture_title">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+  <div class="picture_title">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+  <div class="picture_title">
+    <%= form.label :image_user %>
+    <%= form.file_field :image_user %>
+  </div>
+  <%= form.submit %>
+<% end %>
