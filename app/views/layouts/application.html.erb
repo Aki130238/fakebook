@@ -10,18 +10,86 @@
   </head>
 
   <body>
-    <% flash.each do |key, value| %>
-      <%= content_tag(:div, value, class: "#{key}") %>
-    <% end %>
+    <header class="header-menu">
+      <div class="menu-box">
+        <img src="/Facebook_New_Logo.png" height="82px" class="headerlogo">
+        <div class="menu-login">
 
-    <% if logged_in? %>
-      <%= link_to "Profile", user_path(current_user.id) %>
-      <%= link_to "Logout", session_path(current_user.id), method: :delete %>
-    <% else %>
-      <%= link_to "Sign up", new_user_path %>
-      <%= link_to "Login", new_session_path %>
-    <% end %>
-
+          <% if logged_in? %>
+          <ul>
+            <li><%= link_to(current_user.name, "/users/#{current_user.id}") %></li>
+            <li><%= link_to("HOME", root_path, class: "rootLink") %></li>
+            <li><%= link_to "Profile", user_path(current_user.id) %></li>
+            <li><%= link_to("Picture一覧","/pictures")%></li>
+            <li><%= link_to("Picture投稿", new_picture_path) %></li>
+            <li><%= link_to("ユーザー一覧", users_path) %></li>
+            <li><%= link_to "ログアウト", session_path(current_user.id), method: :delete %></li>
+          <% else %>
+            <li><%= link_to("HOME", root_path, class: "rootLink") %></li>
+            <li><%= link_to "ユーザー登録", new_user_path %></li>
+            <li><%= link_to "ログイン", new_session_path %></li>
+          </ul>
+          <% end %>
+        </div>
+      </div>
+    </header>
     <%= yield %>
+    <footer>
+      <div  class="foot-wrap">
+        <div class="choicelanguage">
+          <ul>
+            <li>日本語</li>
+            <li><a href="#">English(US)</a></li>
+            <li><a href="#">Português (Brasil)</a></li>
+            <li><a href="#">中文(简体)</a></li>
+            <li><a href="#">Tiếng Việt</a></li>
+            <li><a href="#">Español</a></li>
+            <li><a href="#">Bahasa</a></li>
+            <li><a href="#">Indonesia</a></li>
+            <li><a href="#">한국어</a></li>
+            <li><a href="#">Français(France)</a></li>
+            <li><a href="#">Deutsch</a></li>
+            <li><a href="#">Italiano</a></li>
+          </ul>
+        </div>
+        <div class="clear"></div>
+        <div class="footlist">
+          <ul>
+            <li><a href="#">アカウント登録</a></li>
+            <li><a href="#">ログイン</a></li>
+            <li><a href="#">Messenger</a></li>
+            <li><a href="#">Facebook Lite</a></li>
+            <li><a href="#">ユーザー</a></li>
+            <li><a href="#">プロフィール</a></li>
+            <li><a href="#">ページ</a></li>
+            <li><a href="#">ページカテゴリ</a></li>
+            <li><a href="#">イベント</a></li>
+            <li><a href="#">スポット</a></li>
+            <li><a href="#">ゲーム</a></li>
+            <li><a href="#">場所</a></li>
+            <li><a href="#">Marketplace</a></li>
+            <li><a href="#">グループ</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">ローカル</a></li>
+            <li><a href="#">募金キャンペーン</a></li>
+            <li><a href="#">サービス</a></li>
+            <li><a href="#">Facebookについて</a></li>
+            <li><a href="#">広告を作成</a></li>
+            <li><a href="#">ページを作成</a></li>
+            <li><a href="#">開発者</a></li>
+            <li><a href="#">採用情報</a></li>
+            <li><a href="#">プライバシー</a></li>
+            <li><a href="#">Cookie</a></li>
+            <li><a href="#">AdChoices</a></li>
+            <li><a href="#">規約</a></li>
+            <li><a href="#">アカウントのセキュリティ</a></li>
+            <li><a href="#">ログインのヘルプ</a></li>
+            <li><a href="#">ヘルプ</a></li>
+            <li><a href="#">Facebook © 2019</a></li>
+          </ul>
+          <div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

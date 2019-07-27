@@ -13,3 +13,117 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  margin: 0;
+  background-color: #E9EBEE;
+}
+
+a {
+  text-decoration: none;
+  color: #42609D;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ol, ul, li {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
+ul {
+  display: block;
+  list-style-type: disc;
+  /*margin-block-start: 1em;*/
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+.menu-login li {
+  float: left;
+  padding: 0 10px;
+}
+
+.header-menu {
+  height: 82px;
+  width: 100%;
+  background-color: #3b5998;
+  background-image: linear-gradient(#4e69a2, #3b5998 50%);
+  border-bottom: 1px solid #133783;
+  min-height: 42px;
+  position: relative;
+  z-index: 1;
+}
+
+.menu-box {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.headerlogo {
+  float: left;
+}
+
+.menu-login {
+  float: right;
+}
+
+.header-menu {
+  text-align: center;
+  line-height: 82px;
+}
+
+.header-menu a {
+  color: white;
+}
+
+a:hover.header-menu {
+  color: #999;
+  text-decoration: underline;
+}
+
+
+footer {
+
+}
+
+.foot-wrap {
+  width: 980px;
+  height: 100px;
+  margin: 0 auto;
+  font-size: 12px;
+  padding-top: 10px;
+}
+
+.choicelanguage {
+  float: left;
+}
+
+.footlist {
+
+}
+
+
+.foot-wrap li {
+  font-size: 12px;
+  float: left;
+  padding: 0px 5px;
+}
+
+.foot-wrap li a {
+
+}
+
+li a:hover.foot-wrap {
+  text-decoration: underline;
+}
+
+
+.clear {
+  clear: both;
+}

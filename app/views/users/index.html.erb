@@ -1,19 +1,21 @@
-<h1>user一覧</h1>
-<p><%= notice %></p>
-<table>
-  <tr>
-    <th>タイトル</th>
-    <th>内容</th>
-  </tr>
+<div class="user-index-wrap">
+  <div class="user-index-container">
 
-<% @users.each do |user| %>
-  <tr>
-    <td><%= user.name %></td>
-    <td><%= user.email %></td>
-    <td><%= image_tag user.image_user.to_s %></td>
-    <td><%= link_to '詳細を見る', user_path(user.id) %></td>
-    <td><%= link_to "編集する", edit_user_path(user.id) %></td>
-    <td><%= link_to 'ブログを削除する', user_path(user.id), method: :delete ,data: { confirm: '本当に削除していいですか？' } %></td>
-  </tr>
-<% end %>
-</table>
+    <h1>user一覧</h1>
+    <p><%= notice %></p>
+
+    <% @users.each do |user| %>
+    <div class="user-container">
+      <div class="user-index-name"><%= user.name %></div>
+      <div class="user-index-email"><%= user.email %></div>
+      <%= image_tag user.image_user.to_s , class: "user-index-img" %>
+        <div class="user-index-stauts">
+          <%= link_to '詳細を見る', user_path(user.id) %>
+          <%= link_to "編集する", edit_user_path(user.id) %>
+          <%= link_to 'ブログを削除する', user_path(user.id), method: :delete ,data: { confirm: '本当に削除していいですか？' } %>
+        </div>
+    </div><div class="clear"></div>
+    <% end %>
+
+  </div>
+</div>

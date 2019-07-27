@@ -1,3 +1,73 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+//showページ
+
+.user-show-wrap {
+  width: 980px;
+  min-height: 80vh;
+  margin: 0 auto;
+}
+
+
+//indexページ
+.user-index-wrap {
+  width: 980px;
+  min-height: 80vh;
+  margin: 0 auto;
+}
+
+.user-index-container {
+}
+
+.user-container {
+  width: 400px;
+  height: 100px;
+  margin-top: 40px;
+  position: relative;
+}
+
+.user-index-name {
+  width: 300px;
+  float: right;
+}
+
+.user-index-email {
+  width: 300px;
+  float: right;
+}
+
+.user-index-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  float: left;
+}
+
+.user-index-stauts {
+  width: 300px;
+  float: right;
+}
+
+// newページ
+.singup-wrap {
+  width: 980px;
+  min-height: 70vh;
+  margin: 0 auto;
+}
+
+.l-center {
+  margin-top: 50px;
+  width: 980px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+}

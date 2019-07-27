@@ -1,3 +1,57 @@
 // Place all the styles related to the pictures controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.picture-wrap {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.picture-container {
+  width: 300px;
+}
+
+.picture-box {
+  border-color: #FFF;
+  border-style: 3px solid;
+}
+
+.picture-photo {
+  width: 300px;
+  border-radius: 10px;
+}
+
+.picture-status {
+  width: 300px;
+  margin-bottom: 50px;
+  font-size: 12px;
+
+}
+
+.picture-status-show {
+  float: left;
+  padding: 0 10px;
+}
+
+.picture-status-edit {
+  float: left;
+  padding: 0 10px;
+}
+
+.picture-status-destroy {
+  float:left;
+  padding: 0 10px;
+}
+
+//showページ
+
+.picture-show-wrap {
+  width: 980px;
+  margin: 0 auto;
+}
+
+//newページ
+.picture-new-wrap {
+  width: 980px;
+  margin: 0 auto;
+}

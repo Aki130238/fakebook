@@ -1,4 +1,6 @@
-<h1>user詳細画面</h1>
-<p>タイトル: <%= @user.name %></p>
-<p>内容: <%= @user.email %></p>
-<%= image_tag @user.image_user.to_s %>
+<div class="user-show-wrap">
+  <h1>user詳細画面</h1>
+  <p>名前: <%= @user.name %></p>
+  <p>メール: <%= @user.email %></p>
+  <%= image_tag @user.image_user.to_s %>
+</div>

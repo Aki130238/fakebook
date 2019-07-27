@@ -1,19 +1,18 @@
-<h1>Picture一覧</h1>
-<p><%= notice %></p>
-<table>
-  <tr>
-    <th>タイトル</th>
-    <th>内容</th>
-  </tr>
-
-<% @pictures.each do |picture| %>
-  <tr>
-    <td><%= picture.title %></td>
-    <td><%= picture.content %></td>
-    <td><%= image_tag picture.image_pict.to_s %></td>
-    <td><%= link_to '詳細を見る', picture_path(picture.id) %></td>
-    <td><%= link_to "編集する", edit_picture_path(picture.id) %></td>
-    <td><%= link_to 'ブログを削除する', picture_path(picture.id), method: :delete ,data: { confirm: '本当に削除していいですか？' } %></td>
-  </tr>
-<% end %>
-</table>
+<div class="picture-wrap">
+  <p><%= notice %></p>
+  <h1>Picture一覧</h1>
+  <div class="picture-container">
+    <% @pictures.each do |picture| %>
+      <div class=""><%= picture.title %></div>
+      <div class=""><%= picture.user.name %></div>
+      <div class="picture-box"><%= image_tag picture.image_pict.to_s , class: "picture-photo"%></div>
+      <div class=""><%= picture.content %></div>
+      <div class="picture-status">
+        <div class="picture-status-show"><%= link_to '詳細を見る', picture_path(picture.id) %></div>
+        <div class="picture-status-edit"><%= link_to "編集する", edit_picture_path(picture.id) %></div>
+        <div class="picture-status-destroy"><%= link_to 'Pictureを削除する', picture_path(picture.id), method: :delete ,data: { confirm: '本当に削除していいですか？' } %></div>
+      </div>
+      <div class="clear"></div>
+    <% end %>
+  </div>
+</div>

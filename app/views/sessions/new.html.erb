@@ -1,11 +1,19 @@
-<h1>Log in</h1>
-<%= form_with(scope: :session, url: sessions_path, local: true) do |f| %>
+<div class="session-new-wrap">
+  <div class="login-box">
+    <h1>ログイン</h1>
+    <% flash.each do |key, value| %>
+      <%= content_tag(:div, value, class: "#{key}") %>
+    <% end %>
 
-  <%= f.label :email %>
-  <%= f.email_field :email %>
+    <%= form_with(scope: :session, url: sessions_path, local: true) do |f| %>
 
-  <%= f.label :password %>
-  <%= f.password_field :password %>
+      <%= f.label :email %>
+      <%= f.email_field :email %>
 
-  <%= f.submit "Log in" %>
-<% end %>
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+
+      <%= f.submit "ログイン" %>
+    <% end %>
+  </div>
+</div>
