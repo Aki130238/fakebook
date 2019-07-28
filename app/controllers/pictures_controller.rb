@@ -10,8 +10,6 @@ class PicturesController < ApplicationController
   end
 
   def create
-    # @picture = Picture.new(picture_params)
-    # @picture.user_id = current_user.id
     @picture = current_user.pictures.new(picture_params)
     @picture.image_pict.retrieve_from_cache! params[:cache][:image_pict]#carriewave設定
     if params[:back]
@@ -46,8 +44,6 @@ class PicturesController < ApplicationController
   end
 
   def confirm
-    # @picture = Picture.new(picture_params)
-    # @picture.user_id = current_user.id
     @picture = current_user.pictures.new(picture_params)
     @picture.image_pict.cache! #carriewave設定
     render :new if @picture.invalid?
@@ -62,5 +58,4 @@ class PicturesController < ApplicationController
   def set_picture
     @picture = Picture.find(params[:id])
   end
-
 end
